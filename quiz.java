@@ -19,6 +19,14 @@ public class quiz {
                 int answer = input.nextInt();
                 input.nextLine();
                 success = (answer == number);
+                if (answer < number) {
+                    System.out.println("Wrong answer. Try again.");
+                } else if (answer > number) {
+                    System.out.println("Close enough. Try again.");
+                } else {
+                    success = true;
+                    System.out.println("Congratuations! your guess is correct");
+                }
 
             } while (!success);
             System.out.print("Do you want to repeat the game (Y/N) ");
